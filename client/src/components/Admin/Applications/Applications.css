@@ -1,0 +1,172 @@
+table { 
+	width: 750px; 
+	border-collapse: collapse; 
+	margin:50px auto;
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: #eee; 
+	}
+
+th { 
+	background: #3498db; 
+	color: white; 
+	font-weight: bold; 
+	}
+
+td, th { 
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+	font-size: 18px;
+	}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table { 
+	width: 100%; 
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+
+}
+/* body {
+  color: #000000;
+  font-family: Sans-Serif;
+  padding: 30px;
+  background-color: #f6f6f6;
+} */
+
+
+/* Dropdown */
+
+.dropdown {
+	display: inline-block;
+	position: relative;
+  }
+  
+  .dd-button {
+	display: inline-block;
+	border: 1px solid gray;
+	border-radius: 4px;
+	padding: 10px 30px 10px 20px;
+	background-color: #ffffff;
+	cursor: pointer;
+	white-space: nowrap;
+  }
+  
+  .dd-button:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	transform: translateY(-50%);
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid black;
+}
+
+.dd-button:hover {
+	background-color: #eeeeee;
+}
+
+
+.dd-input {
+	display: none;
+}
+
+.dd-menu {
+	position: absolute;
+	top: 100%;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 0;
+	margin: 2px 0 0 0;
+	box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+	background-color: #ffffff;
+	list-style-type: none;
+}
+
+.dd-input + .dd-menu {
+	display: none;
+} 
+
+.dd-input:checked + .dd-menu {
+	display: block;
+} 
+
+.dd-menu li {
+	padding: 10px 20px;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.dd-menu li:hover {
+	background-color: #f6f6f6;
+}
+
+.dd-menu li a {
+	display: block;
+	margin: -10px -20px;
+	padding: 10px 20px;
+}
+
+.dd-menu li.divider{
+	padding: 0;
+	border-bottom: 1px solid #cccccc;
+}
+.reject {
+	font-size: 15px;
+	color: red;
+}
+
+.approve {
+	font-size: 15px;
+	color: green;
+}

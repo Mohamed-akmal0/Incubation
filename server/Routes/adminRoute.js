@@ -1,0 +1,15 @@
+const router = require('express').Router()
+const {Login, getUSerInfo, block, unBlock , getForm , approve , bookSlot,reject , getSlot , approvedCompany} = require ('../controllers/adminController')
+
+router.get('/', (req,res) => {})
+router.post('/login' , Login)
+router.get('/getUSers' , getUSerInfo )
+router.patch('/blockUser/:id' , block)
+router.patch('/unBlockUser/:id' , unBlock)
+router.get('/getForm', getForm )
+router.patch('/formApprove/:id' , approve)
+router.patch('/formReject/:id' , reject)
+router.get('/getSlot' , getSlot)
+router.get('/approvedCompany' , approvedCompany)
+router.post('/bookSlot' , bookSlot )  
+module.exports = router

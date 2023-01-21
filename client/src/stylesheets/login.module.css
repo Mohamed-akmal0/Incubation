@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.page {
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.cover{
+    background-color: white;
+    width: 30em;
+    height: 35em;
+    position: relative;
+    border-radius:2em;
+    box-shadow: 0 0.188em 1.550em rgb(156 , 156 ,156);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+input{
+    border: none;
+    background-color: rgb(229,226,226);
+    width: 80%;
+    height: 3em;
+    border-radius: 0.25em;
+    text-align: center;
+    padding: 2em;
+    /* margin-bottom: 10px; */
+    /* margin-left: 45px; */
+    /* margin-top: 10px; */
+}
+input:focus{
+    outline-color: rgb(32 ,177 ,255);
+}
+.login_btn{
+    width: 40%;
+    height: 3em;
+    background-color: rgb(32 ,177 ,255);
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 0.25em;
+    display: flex;
+    cursor: pointer;
+    /* margin-left: 100px; */
+}
+.login_btn:hover{
+    transform: scale(1.25);
+}
+.text{
+    position: relative;
+    bottom: 1em;
+    /* margin-left: 80px; */
+}
+.alt_login{
+    width:80% ;
+    height:3em ;
+    display: flex;
+    justify-content: center;
+}
+.alt_login div{
+    width: 45%;
+    height: 90%;
+    border-radius: 0.25em;
+    background-color: black;
+    color: white;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+.show_Pop{
+    position:absolute;
+    height:30em;
+    width: 30em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25em;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    transform: scale(1);
+    transition: 0.8s;
+}
+.hide{
+    /* display: none; */
+    position: absolute;
+    transform: scale(0);
+}
+span{
+    color: red;
+    font-size: 5px;
+    position: relative;
+}
